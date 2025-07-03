@@ -153,7 +153,7 @@ return { -- Autocompletion
 					group_index = 0,
 				},
 				{ name = "nvim_lsp" },
-				{ name = "luasnip" },
+				--{ name = "luasnip" }, --Hide LuaSnip popus for now (maybe i can set up with toggle snippits later?)
 				{ name = "buffer" },
 				{ name = "path" },
 			},
