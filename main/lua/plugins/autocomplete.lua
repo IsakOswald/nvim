@@ -75,6 +75,12 @@ return { -- Autocompletion
 			},
 			completion = { completeopt = "menu,menuone,noinsert" },
 
+			--WARNING: This is disabling documentation/function definitions.
+			window = {
+				documentation = false,  -- Disable by default
+			},
+			-- WARNING: END. I can add a keybinding for this to toggle if I miss it.
+
 			-- For an understanding of why these mappings were
 			-- chosen, you will need to read `:help ins-completion`
 			--
