@@ -9,43 +9,50 @@
 --    end,
 --}
 
+return {
+	"axvr/photon.vim",
+	lazy = false,
+	priority = 1000,
+	config = function()
+		-- Enable true color support
+		vim.opt.termguicolors = true
+		-- Set the colorscheme to Photon
+		vim.cmd("colorscheme photon")
+
+		vim.cmd([[
+        highlight Identifier gui=italic cterm=italic
+        highlight @variable gui=italic cterm=italic
+        highlight @parameter gui=italic cterm=italic
+        highlight @property gui=italic cterm=italic
+        ]])
+	end,
+}
+
 --return {
---    "axvr/photon.vim",
+--    "marko-cerovac/material.nvim",
 --    lazy = false,
 --    priority = 1000,
 --    config = function()
---        -- Enable true color support
---        vim.opt.termguicolors = true
---        -- Set the colorscheme to Photon
---        vim.cmd("colorscheme photon")
+--        -- Set Material variant
+--        vim.g.material_style = "palenight"
+
+-- Apply font styling preferences
+--        require("material").setup({
+--            italics = {
+--                comments = true,
+--                keywords = false,
+--                functions = false,
+--                strings = false,
+--                variables = true,
+--            },
+--            disable = {
+--                background = false,
+--                term_colors = false,
+--                eob_lines = true,
+--            },
+--        })
+
+-- Load the colorscheme
+--        vim.cmd("colorscheme material")
 --    end,
 --}
-
-return {
-    "marko-cerovac/material.nvim",
-    lazy = false,
-    priority = 1000,
-    config = function()
-        -- Set Material variant
-        vim.g.material_style = "palenight"
-
-        -- Apply font styling preferences
-        require("material").setup({
-            italics = {
-                comments = true,
-                keywords = false,
-                functions = false,
-                strings = false,
-                variables = true,
-            },
-            disable = {
-                background = false,
-                term_colors = false,
-                eob_lines = true,
-            },
-        })
-
-        -- Load the colorscheme
-        vim.cmd("colorscheme material")
-    end,
-}
