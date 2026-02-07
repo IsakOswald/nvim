@@ -14,6 +14,8 @@ return {
                 "vimdoc",
                 "query", -- for Treesitter queries, used internally
 
+                "c_sharp", --For C#.
+
                 -- Additional useful language
                 "python", -- Python for backend/dev work + other
             },
